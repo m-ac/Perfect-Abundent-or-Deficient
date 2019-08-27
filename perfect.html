@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function Perfect()
+{
+var temp,rem,n,i,add=0;
+n=Number(document.getElementById("perf").value);
+temp=n;
+ for(i = 0;i<n;i++)
+   {
+     rem = n%i;
+     if(rem==0)
+	{
+	 add+=i;
+	}
+    }
+if(add==temp)
+ {
+   alert("The inputed number is Perfect");
+ }
+else if(add>temp)
+ {
+  alert("The inputed number is abundent");
+ }
+else
+alert("The inputed number is Deficient");
+
+}
+</script>
+</head>
+<body>
+Enter any number<Input type="text" id="perf">
+<button type="button" onclick="Perfect()">Check</button>
+</body>
+</html>
